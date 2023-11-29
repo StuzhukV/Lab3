@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <style>
+        body {
+            background-image: url('images/fon.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+    </style>
+    <title>Fox Gaming Shop</title>
+    <script src="script.js" defer></script>
+    
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="images/ava.jpg" alt="Fox Gaming Shop Logo" class="logo">
+        </div>
+        <h1>Fox Gaming Shop</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Головна</a></li>
+                <li>
+                    <a href="#">Каталог<span class="sub-menu-icon"></span></a>
+                    <ul>
+                        <li><a href="#">Комп'ютери</a></li>
+                        <li><a href="#">Ноутбуки</a></li>
+                        <li><a href="#">Монітори</a></li>
+                    </ul>
+                </li>
+                <li><a href="survey.html">Опитування</a></li>
+                <li><a href="news.html">Новини</a></li>
+                <li><a href="components.html">Комплектуючі</a></li>
+                <li><a href="personal_cabinet.html">Особистий кабінет</a></li>
+                <li class="search-container">
+                    <input type="text" id="search" placeholder="Пошук" style="width: 150px; height: 30px;">
+                    <button type="button" style="height: 30px;">Пошук</button>
+                </li>          
+    
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2 class="welcome-text">
+                <span class="highlight">Ласкаво просимо до Fox Gaming Shop!</span>
+            </h2>
+            <p class="welcome-text">
+                Магазин, де ви знайдете все необхідне для вашого ідеального геймінг-сетапу.
+                Fox Gaming Shop - це не просто магазин комп'ютерних компонентів, але і місце,
+                де ви можете знаходити найсучасніші технології та геймінгове обладнання.
+            </p>
+            <h3 class="welcome-text highlight">Наші пропозиції:</h3>
+            <ul class="welcome-text">
+                <li>Широкий вибір комплектуючих для ПК від провідних виробників.</li>
+                <li>Найновіші графічні відеокарти, щоб забезпечити найкращий геймплей.</li>
+                <li>Монітори з високою роздільною здатністю для неперевершеного візуального досвіду.</li>
+                <li>Периферійні пристрої, які допоможуть вам стати справжнім професіоналом.</li>
+            </ul>
+            <p class="welcome-text">
+                У нас ви знайдете все, що потрібно для створення потужної геймінгової системи та
+                насолоди ігровим процесом на повну катушку. Обирайте якість, обирайте Fox Gaming Shop!
+            </p>
+        </section>
+        <section>
+            <div class="image-container">
+                <img class="helper-image" src="images/nova.jpg" >
+                <div class="image-text">Безкоштовна доствка від Nova Пошта</div>
+            </div>
+        </section>
+        
+    </main>
+    <button id="scroll-to-top" onclick="scrollToTop()">Наверх</button>
+
+    <script>
+        function scrollToTop() {
+            const navigationBlock = document.getElementById("navigation");
+            navigationBlock.scrollIntoView({ behavior: "smooth" });
+        }
+    
+        window.onscroll = function () {
+            scrollFunction();
+        };
+    
+        function scrollFunction() {
+            const scrollToTopButton = document.getElementById("scroll-to-top");
+    
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollToTopButton.style.display = "block";
+            } else {
+                scrollToTopButton.style.display = "none";
+            }
+        }
+    </script>
+
+        <footer class="fixed-footer">
+        <p>&copy; 2023 Магазин комп'ютерів. Всі права захищені.</p>
+    </footer>
+
+
+</body>
+</html>
+
